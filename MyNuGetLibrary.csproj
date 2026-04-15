@@ -12,6 +12,9 @@
 
 		<!-- Optional but recommended -->
 		<RepositoryType>git</RepositoryType>
+
+		<!-- Add this -->
+		<RepositoryUrl>https://github.com/salehadk59-boop/MyNuGetLibrary</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
