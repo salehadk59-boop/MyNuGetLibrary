@@ -107,7 +107,7 @@ jobs:
         
       # Sanity-check: confirm project.assets.json exists before uploading.
       - name: Verify dependency metadata
-        run: find MyNuGetLibrary -name project.assets.json
+        run: find -name project.assets.json
 
       # Upload the project folder so the clearing job can consume it.
       # The artifact name 'cc-input' is the contract with the reusable workflow.
