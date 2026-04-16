@@ -101,10 +101,13 @@ jobs:
       # contains the dependency graph consumed by the Package Identifier.
       - name: Restore NuGet dependencies
         run: dotnet restore MyNuGetLibrary.csproj
-
+        
+      - name: Build
+        run: dotnet build MyNuGetLibrary.csproj
+        
       # Sanity-check: confirm project.assets.json exists before uploading.
       - name: Verify dependency metadata
-        run: find MyNuGetLibrary -name project.assets.json
+        run: find -name project.assets.json
 
       # Upload the project folder so the clearing job can consume it.
       # The artifact name 'cc-input' is the contract with the reusable workflow.
@@ -112,7 +115,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cc-input
-          path: MyNuGetLibrary
+          path: ./obj
           # Fail the step if the folder is empty (no assets generated).
           if-no-files-found: error
 
