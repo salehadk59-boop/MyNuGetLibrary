@@ -115,7 +115,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cc-input
-          path: bin/debug/net8.0/MyNuGetLibrary
+          path: MyNuGetLibrary
           # Fail the step if the folder is empty (no assets generated).
           if-no-files-found: error
 
