@@ -2,5 +2,5 @@
 
 public class Class1
 {
-    int j = 9;
+    int j = 8;
 }
