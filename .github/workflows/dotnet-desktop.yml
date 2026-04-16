@@ -100,7 +100,7 @@ jobs:
       # Restores NuGet packages and writes obj/project.assets.json which
       # contains the dependency graph consumed by the Package Identifier.
       - name: Restore NuGet dependencies
-        run: dotnet restore MyNuGetLibrary/MyNuGetLibrary.csproj
+        run: dotnet restore MyNuGetLibrary.csproj
 
       # Sanity-check: confirm project.assets.json exists before uploading.
       - name: Verify dependency metadata
