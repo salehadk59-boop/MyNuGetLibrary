@@ -101,7 +101,10 @@ jobs:
       # contains the dependency graph consumed by the Package Identifier.
       - name: Restore NuGet dependencies
         run: dotnet restore MyNuGetLibrary.csproj
-
+        
+      - name: Build
+        run: dotnet build MyNuGetLibrary.csproj
+        
       # Sanity-check: confirm project.assets.json exists before uploading.
       - name: Verify dependency metadata
         run: find MyNuGetLibrary -name project.assets.json
