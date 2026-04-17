@@ -53,7 +53,7 @@ on:
   pull_request:
     # Runs on all target branches to catch compliance issues before merge.
 
-    # workflow_dispatch:
+     workflow_dispatch:
      inputs:
      enable_sw360_package_creator:
         description: 'Run SW360 Package Creator'
