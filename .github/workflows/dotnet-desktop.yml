@@ -58,17 +58,17 @@ on:
       enable_sw360_package_creator:
         description: 'Run SW360 Package Creator'
         type: boolean
-        default: false
+        default: true
 
       enable_artifactory_uploader:
         description: 'Run Artifactory Uploader (dry-run by default)'
         type: boolean
-        default: false
+        default: true
 
       jfrog_dry_run:
         description: 'Artifactory dry-run mode (false = live copy/move for releases)'
         type: boolean
-        default: false
+        default: true
 
 
 concurrency:
